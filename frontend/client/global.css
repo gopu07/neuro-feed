@@ -1,0 +1,175 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * NeuroFeed Dark Mode - Ultra-Premium AI Learning Platform
+   * Colors expressed as HSL for Tailwind integration
+  */
+  :root {
+    /* NeuroFeed Primary Colors */
+    --neuro-bg-primary: 220 52% 6%;      /* #0B0F19 */
+    --neuro-bg-surface: 221 52% 11%;     /* #111827 */
+    --neuro-bg-elevated: 213 29% 20%;    /* #1F2937 */
+    --neuro-accent-purple: 259 94% 63%;  /* #8B5CF6 */
+    --neuro-accent-cyan: 188 100% 42%;   /* #06B6D4 */
+    --neuro-text-primary: 213 11% 90%;   /* #E5E7EB */
+    --neuro-text-muted: 213 11% 90%;     /* #E5E7EB @ 60% opacity */
+
+    /* Mapped to Tailwind structure */
+    --background: var(--neuro-bg-primary);
+    --foreground: var(--neuro-text-primary);
+
+    --card: var(--neuro-bg-elevated);
+    --card-foreground: var(--neuro-text-primary);
+
+    --popover: var(--neuro-bg-surface);
+    --popover-foreground: var(--neuro-text-primary);
+
+    --primary: var(--neuro-accent-purple);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: var(--neuro-accent-cyan);
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 13% 20%;
+    --muted-foreground: var(--neuro-text-muted);
+
+    --accent: var(--neuro-accent-purple);
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 16%;
+    --input: var(--neuro-bg-surface);
+    --ring: var(--neuro-accent-purple);
+
+    --radius: 1rem;
+
+    --sidebar-background: var(--neuro-bg-surface);
+    --sidebar-foreground: var(--neuro-text-primary);
+    --sidebar-primary: var(--neuro-accent-purple);
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: var(--neuro-accent-cyan);
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 16%;
+    --sidebar-ring: var(--neuro-accent-purple);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins antialiased tracking-wide;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+    @apply font-geist-mono;
+  }
+
+  /* Typography System */
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-bold tracking-tight;
+  }
+
+  h4 {
+    @apply text-xl font-bold;
+  }
+
+  h5 {
+    @apply text-lg font-bold;
+  }
+
+  h6 {
+    @apply text-base font-bold;
+  }
+
+  /* Glassmorphism utilities */
+  .glass {
+    @apply backdrop-blur-md bg-opacity-50 border border-white border-opacity-10;
+  }
+
+  .glass-elevated {
+    @apply backdrop-blur-lg bg-white bg-opacity-5 border border-white border-opacity-20;
+  }
+
+  .glass-premium {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.7) 0%, rgba(11, 15, 25, 0.85) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .learning-card-hover {
+    @apply transition-all duration-300 cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .learning-card-hover:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 12px 40px -10px rgba(139, 92, 246, 0.15), 0 0 25px -5px rgba(6, 182, 212, 0.05);
+  }
+
+  /* Glow effects */
+  .glow-purple {
+    @apply shadow-lg shadow-purple-500/20;
+  }
+
+  .glow-cyan {
+    @apply shadow-lg shadow-cyan-500/20;
+  }
+
+  .glow-cyan-subtle {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.1);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}

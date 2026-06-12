@@ -1,0 +1,20 @@
+{
+  "system_mode": "autonomous_organization",
+  "current_phase": "Phase 1 - Discovery",
+  "architectural_decisions": {
+    "daily_challenge_exploit_fix": "Use SQLAlchemy with_for_update() on user records combined with full completed status validation on all daily challenge cards.",
+    "arxix_hallucination_prevention": "Strictly fetch paper details via export.arxiv.org API using extracted paper IDs and feed parsed title and abstract to Groq.",
+    "spaced_rep_reviews": "Create a dedicated '/reviews' tab and '/api/reviews/queue' route that serves only cards due for review.",
+    "gamification_streak_store": "Add user.streak_shield column and build purchase mechanisms spending XP directly."
+  },
+  "configurations": {
+    "streak_shield_cost": 100,
+    "variable_xp_multipliers": [1.0, 1.5, 2.0],
+    "review_ratings": {
+      "1": "again",
+      "2": "hard",
+      "3": "good",
+      "4": "easy"
+    }
+  }
+}
